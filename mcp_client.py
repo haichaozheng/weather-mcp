@@ -8,8 +8,8 @@ from langchain_mcp_adapters.tools import load_mcp_tools
 from langchain_core.messages import AIMessage
 
 # 核心修复：在程序最开始设置正确的事件循环策略
-if sys.platform == 'win32':
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+# if sys.platform == 'win32':
+#     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 load_dotenv()
 
@@ -25,8 +25,8 @@ async def main():
         # 修改为使用HTTP/SSE传输 - 避免stdio问题
         print("启动 weather 服务器...")
         
-        # 先确保weather服务器以SSE模式运行在8000端口
-        # 在weather.py中需要修改：mcp.run(transport='sse', port=8000)
+        # 先确保weather服务器以SSE模式运行
+        # 在weather.py中需要修改：mcp.run(transport='sse')
         
         from mcp.client.sse import sse_client
         

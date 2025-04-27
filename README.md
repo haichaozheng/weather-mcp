@@ -85,3 +85,20 @@ weather-mcp/
 ├── requirements.txt # 项目依赖
 ├── .env.example # 环境变量示例
 └── README.md # 本文档
+```
+
+## 环境变量配置
+
+项目使用 `.env` 文件存储环境变量和敏感信息。请按照以下步骤设置：
+
+1. 复制环境变量模板文件：
+   ```bash
+   cp .env.example .env
+   ```
+
+2. 编辑 `.env` 文件，填入您的实际配置：
+   ```
+   MOONSHOT_API_KEY=your_actual_api_key
+   ```
+
+3. 确保 `.env` 文件不会被提交到版本控制系统中
