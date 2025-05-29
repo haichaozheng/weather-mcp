@@ -98,3 +98,4 @@ if __name__ == "__main__":
     # print(get_forecast(37.7749, -122.4194))
     print("the mcp server of weather is running successfully ......")
     mcp.run(transport='sse')
+    # mcp.run('sse')
